@@ -77,7 +77,7 @@ print("Forest Model's root mean squared error = ", forest_rmse)
 print("Forest Model's r2 score = ", forest_r2_test_score)
 
 forest_cv = TimeSeriesSplit(n_splits=5)
-scores = cross_val_score(forest_model, X_train, y_train, cv=forest_cv, scoring="r2")
+scores = cross_val_score(forest_model, X_train, y_train, cv=forest_cv)
 
 print("Forest Model's cross validation scores: ", scores)
 print("Forest Model's average score = ", scores.mean())
